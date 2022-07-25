@@ -2,6 +2,7 @@ package com.bridgelabz.datastructure;
 
 public class LinkedList<T> {
 
+
     Node<T> head;
     Node<T> tail;
     public void push(T key){
@@ -14,6 +15,18 @@ public class LinkedList<T> {
             newNode.next = head;
             head = newNode;
         }
+    }
+    public void add(T key){
+        Node<T> newNode = new Node<>(key);
+        if(head==null){
+            head = newNode;
+            tail = newNode;
+        }
+        else{
+            tail.next = newNode;
+            tail = newNode;
+        }
+
     }
 
     public void print() {
