@@ -9,6 +9,7 @@ public class LinkedListMain {
         linkedList1.push(56);
         linkedList1.print();
         System.out.println();
+        System.out.println();
 
     }
 }
