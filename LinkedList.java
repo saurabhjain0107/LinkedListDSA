@@ -42,4 +42,15 @@ public class LinkedList<T> {
         head = head.next;
         return deletedata;
     }
+
+    public T remove() {
+        T deletedata = tail.data;;
+        Node<T> temp = head;
+        while(temp.next != tail){
+            temp = temp.next;
+        }
+        temp.next = null;
+        temp = tail;
+        return deletedata;
+    }
 }
