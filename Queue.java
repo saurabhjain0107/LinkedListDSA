@@ -14,4 +14,10 @@ public class Queue<T> {
     public void print() {
         linkedList.print();
     }
+
+
+    public T remove() {
+        linkedList.remove();
+        return null;
+    }
 }
