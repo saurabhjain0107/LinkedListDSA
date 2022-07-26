@@ -9,6 +9,9 @@ public class LinkedListMain {
         stack1.push(70);
         stack1.print();
         System.out.println();
+        System.out.println(stack1.pop());
+        stack1.print();
+        System.out.println();
 
     }
 }

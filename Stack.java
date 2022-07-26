@@ -14,4 +14,8 @@ public class Stack<T> {
     public void print() {
         linkedList.print();
     }
+
+    public T pop() {
+       return linkedList.pop();
+    }
 }
