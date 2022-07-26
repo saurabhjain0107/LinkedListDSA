@@ -5,24 +5,24 @@ public class LinkedList<T> {
 
     Node<T> head;
     Node<T> tail;
-    public void push(T key){
+
+    public void push(T key) {
         Node<T> newNode = new Node<>(key);
-        if(head == null){
+        if (head == null) {
             head = newNode;
             tail = newNode;
-        }
-        else{
+        } else {
             newNode.next = head;
             head = newNode;
         }
     }
-    public void add(T key){
+
+    public void add(T key) {
         Node<T> newNode = new Node<>(key);
-        if(head==null){
+        if (head == null) {
             head = newNode;
             tail = newNode;
-        }
-        else{
+        } else {
             tail.next = newNode;
             tail = newNode;
         }
@@ -31,7 +31,7 @@ public class LinkedList<T> {
 
     public void print() {
         Node<T> temp = head;
-        while(temp != null){
+        while (temp != null) {
             System.out.print(temp.data + "->");
             temp = temp.next;
         }
@@ -44,13 +44,24 @@ public class LinkedList<T> {
     }
 
     public T remove() {
-        T deletedata = tail.data;;
+        T deletedata = tail.data;
+        ;
         Node<T> temp = head;
-        while(temp.next != tail){
+        while (temp.next != tail) {
             temp = temp.next;
         }
         temp.next = null;
         temp = tail;
         return deletedata;
+    }
+
+    public Node<T> search(T searchdata) {
+        Node<T> temp = head;
+        while (temp != null) {
+            if (temp.data.equals(searchdata))
+                return temp;
+            temp = temp.next;
+        }
+        return null;
     }
 }
