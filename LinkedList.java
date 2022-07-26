@@ -64,4 +64,15 @@ public class LinkedList<T> {
         }
         return null;
     }
+
+    public boolean insertafter(T searchdata, T insertafter) {
+        Node<T> newNode = new Node<>(insertafter);
+        Node<T> searchedNode = search(searchdata);
+        if(searchedNode!=null){
+            newNode.next = searchedNode.next;
+            searchedNode.next = newNode;
+            return true;
+        }
+        return false;
+    }
 }

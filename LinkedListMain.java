@@ -26,6 +26,9 @@ public class LinkedListMain {
             System.out.println("Element is found");
         else
             System.out.println("Element is not found");
+        System.out.println(linkedList2.insertafter(30,40));
+        System.out.println();
+        linkedList2.print();
 
     }
 }
